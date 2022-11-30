@@ -1,4 +1,4 @@
-package ThreadEx;
+package Thread.src.ThreadEx;
 
 public class ThreadEx02 implements Runnable{
     Thread currentThread = Thread.currentThread();

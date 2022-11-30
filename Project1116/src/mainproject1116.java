@@ -6,8 +6,8 @@ import java.net.*;
 public class mainproject1116 {
     public static void main(String[] args) {
         try (DatagramSocket socket = new DatagramSocket()){
-            socket.setBroadcast(true);//브로드캐스트 서버로 쓰겠다는 뜻
-            InetAddress groupAddress = InetAddress.getByName("255.255.255.255");// 브로드캐스트 주소
+            //socket.setBroadcast(true);//브로드캐스트 서버로 쓰겠다는 뜻
+            InetAddress groupAddress = InetAddress.getByName("224.0.0.1");// 브로드캐스트 주소
             while(true){
                 int a = ((int)(Math.random() * 9)  + 1);
                 int b = ((int)(Math.random() * 9)  + 1);
@@ -18,7 +18,7 @@ public class mainproject1116 {
                 byte[] buffer = message.getBytes();
                 DatagramPacket packet = new DatagramPacket(buffer, buffer.length, groupAddress, 4000);
                 socket.send(packet);
-                Thread.sleep(3000);
+                Thread.sleep(1000);
             }
         } catch (SocketException e) {
             e.printStackTrace();

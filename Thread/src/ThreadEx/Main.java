@@ -1,10 +1,10 @@
-package ThreadEx;
+package Thread.src.ThreadEx;
 
 public class Main {
     public static void main(String[] args) {
-        ThreadEx01 ex01 = new ThreadEx01("A1");
-        ThreadEx01 ex02 = new ThreadEx01("B1");
-        ThreadEx01 ex03 = new ThreadEx01("C1");
+        ThreadEx.ThreadEx01 ex01 = new ThreadEx.ThreadEx01("A1");
+        ThreadEx.ThreadEx01 ex02 = new ThreadEx.ThreadEx01("B1");
+        ThreadEx.ThreadEx01 ex03 = new ThreadEx.ThreadEx01("C1");
 
         ex01.start();
         ex02.start();
